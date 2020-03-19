@@ -9,7 +9,7 @@ exports.setTourUserIds = (req, res, next) => {
   next();
 };
 
-exports.getAllReview = factory.getAll(Review);
+exports.getAllReviews = factory.getAll(Review);
 exports.getReview = factory.getOne(Review);
 exports.createReview = factory.createOne(Review);
 exports.updateReview = factory.updateOne(Review);
