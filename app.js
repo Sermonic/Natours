@@ -7,6 +7,7 @@ const mongoSatitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const copmression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -65,6 +66,8 @@ app.use(
     ]
   })
 );
+
+app.use(copmression());
 
 // Test middleware
 app.use((req, res, next) => {
